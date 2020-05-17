@@ -212,7 +212,7 @@ public class GameController {
                 }
 
             } else {
-
+                System.out.println("Invalid Move!");
                 timeline.getKeyFrames().add(
                         new KeyFrame(Duration.millis(100),
                                 new KeyValue(circle.opacityProperty(), 1.0d),
