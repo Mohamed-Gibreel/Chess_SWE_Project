@@ -12,12 +12,10 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import Chess.Results.GameResult;
-import Chess.Results.GameResultDao;
+import Model.GameResult;
+import Model.GameResultDao;
 
 import java.io.IOException;
 import java.time.Duration;

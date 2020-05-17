@@ -1,4 +1,4 @@
-package Chess.Results;
+package Model;
 
 
 import java.time.Duration;

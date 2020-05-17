@@ -1,4 +1,4 @@
-package Chess.Results;
+package Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

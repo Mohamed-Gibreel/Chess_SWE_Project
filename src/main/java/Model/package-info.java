@@ -1,4 +1,4 @@
 /**
  * Provides classes for managing game results.
  */
-package Chess.Results;
+package Model;

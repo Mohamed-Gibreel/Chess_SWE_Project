@@ -1,7 +1,7 @@
 package Controller;
 
-import Chess.Results.GameResult;
-import Chess.Results.GameResultDao;
+import Model.GameResult;
+import Model.GameResultDao;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -44,6 +43,7 @@ public class GameController {
     @FXML private Label usernameLabel1;
     @FXML private Label usernameLabel2;
     private String winner;
+    private String winnerName;
 
     @FXML private Label solvedLabel;
 
@@ -202,7 +202,8 @@ public class GameController {
                 if (newCirclePos.getX() == 0 && newCirclePos.getY() == 700) {
                     isSolved = true;
                     doneButton.setText("Finish");
-                    winner = player1turn.getOpacity() == 1 ? userName1 : userName2;
+                    winner = player1turn.getOpacity() == 1 ? "Winner is " + userName1 : "Winner is " + userName2;
+                    winnerName = player1turn.getOpacity() == 1 ? userName1 : userName2;
                     timeline.getKeyFrames().add(
                             new KeyFrame(Duration.millis(100),
                                     new KeyValue(solvedLabel.textProperty(),winner.toString()),
@@ -264,7 +265,7 @@ public class GameController {
     private GameResult getResult() {
 
         GameResult result = GameResult.builder()
-                .player(winner)
+                .player(winnerName)
                 .solved(isSolved)
                 .duration(java.time.Duration.between(beginGame, Instant.now()))
                 .steps(stepCount)

@@ -1,4 +1,4 @@
-package Chess.Results;
+package Model;
 
 import util.jpa.GenericJpaDao;
 import javax.persistence.Persistence;
