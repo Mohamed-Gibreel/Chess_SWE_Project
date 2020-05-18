@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,8 +15,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import Results.GameResult;
-import Results.GameResultDao;
+import results.GameResult;
+import results.GameResultDao;
 
 import java.io.IOException;
 import java.time.Duration;

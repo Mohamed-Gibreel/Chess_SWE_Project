@@ -1,4 +1,4 @@
-package Results;
+package results;
 
 import util.jpa.GenericJpaDao;
 import javax.persistence.Persistence;

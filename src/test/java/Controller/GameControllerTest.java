@@ -1,14 +1,13 @@
-package Controller;
+package controller;
 
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.StrokeType;
-import org.junit.Before;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@Slf4j
 public class GameControllerTest {
 
     GameController gameController;
@@ -45,14 +44,13 @@ public class GameControllerTest {
     @Test
     void moveCircleToInvalidPosition() {
         Circle circle = new Circle();
-        circle.setFill(Paint.valueOf("#0073d700"));
         gameController.randomStartingPosition(circle);
         circle.setCenterX(50);
         circle.setCenterY(50);
         double oldXCoord = circle.getLayoutX();
         double oldYCoord = circle.getLayoutY();
-        double newXCoord = circle.getLayoutX();
-        double newYCoord = -100.0;
+        double newXCoord = 200.0;
+        double newYCoord = 300.0;
         gameController.moveCoordinates(circle, newXCoord, newYCoord);
         setTimeout(() -> assertSame(circle.getLayoutX() == oldXCoord && circle.getLayoutY() == oldYCoord, true), 1000);
     }

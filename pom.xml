@@ -6,13 +6,32 @@
     <artifactId>chess</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
+
+    <name>Chess Game</name>
+    <description>
+        A chess game that has only 1 queen that moves left,down,diagonally left.
+        The goal is to reach the bottom left cell.
+    </description>
+    <url>https://github.com/Mohamed-Gibreel/Chess_SWE_Project</url>
+    <developers>
+        <developer>
+            <name>Mohamed Gibreel</name>
+            <email>m.adilgibreel@gmail.com</email>
+            <id>NHZ48O</id>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/Mohamed-Gibreel/Chess_SWE_Project</connection>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
         <dependency.locations.enabled>false</dependency.locations.enabled>
-        <exec.mainClass>Main.LaunchGame</exec.mainClass>
+        <exec.mainClass>main.LaunchGame</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>

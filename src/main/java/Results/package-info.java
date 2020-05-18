@@ -1,4 +1,4 @@
 /**
  * Provides classes for managing game results.
  */
-package Results;
+package results;

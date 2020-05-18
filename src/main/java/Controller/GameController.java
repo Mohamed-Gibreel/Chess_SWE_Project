@@ -1,7 +1,7 @@
-package Controller;
+package controller;
 
-import Results.GameResult;
-import Results.GameResultDao;
+import results.GameResult;
+import results.GameResultDao;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -21,10 +21,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lombok.extern.slf4j.Slf4j;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-
-//import java.awt.*;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -109,6 +105,7 @@ public class GameController {
     //
     @FXML
     private Pane row7;
+
     private int stepCount;
     private String userName1;
     private String userName2;
@@ -214,7 +211,7 @@ public class GameController {
     }
 
     /**
-     * Incremenets the stepCount and changes it in game.fxml.
+     * Increments the stepCount and changes it in game.fxml.
      */
     public void incrementStepCount() {
         stepCount++;
@@ -236,7 +233,7 @@ public class GameController {
         Point2D rectScene = r.localToScene(r.getX(), r.getY());
         Point2D newCirclePos = boardPane.sceneToLocal(rectScene.getX(), rectScene.getY());
 
-        if (r != null && (mousePoint.getY() > 0) && (mousePoint.getY() < 200) && (mousePoint.getX() < 100) && (mousePoint.getX() > -100)) {
+        if (r != null && (mousePoint.getY() > 0) && (mousePoint.getX() < 100)) {
             if (circle.getLayoutX() == newCirclePos.getX() && circle.getLayoutY() != newCirclePos.getY()) {
                 moveCoordinates(circle, newCirclePos.getX(), newCirclePos.getY());
                 incrementStepCount();
