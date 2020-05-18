@@ -1,4 +1,4 @@
-package Model;
+package Results;
 
 import util.jpa.GenericJpaDao;
 import javax.persistence.Persistence;
@@ -15,6 +15,10 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
         super(GameResult.class);
     }
 
+    /**
+     * Creates an entityManagerFactory.
+     * @return an instance.
+     */
     public static GameResultDao getInstance() {
         if (instance == null) {
             instance = new GameResultDao();

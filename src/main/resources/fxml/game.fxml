@@ -112,7 +112,6 @@
                                 </Pane>
                             </children>
                         </Group>
-                        <Circle fx:id="leavingCircle" centerX="50.0" centerY="50.0" fill="#0073d700" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
                         <Circle fx:id="circle" centerX="50.0" centerY="50.0" fill="WHITE" onMouseReleased="#movePiece" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
                     </children>
                 </Pane>

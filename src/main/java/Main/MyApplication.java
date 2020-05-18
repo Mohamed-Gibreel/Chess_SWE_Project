@@ -6,6 +6,9 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Class that is responsible of the window in which the game runs on.
+ */
 public class MyApplication extends Application {
 
     @Override

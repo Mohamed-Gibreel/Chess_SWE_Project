@@ -13,9 +13,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import Model.GameResult;
-import Model.GameResultDao;
+import Results.GameResult;
+import Results.GameResultDao;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -23,6 +24,10 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/**
+ * Class that provides the top 10 players.
+ */
+@Slf4j
 public class TopTenController {
     @FXML
     private TableView<GameResult> toptenTable;
@@ -39,19 +44,24 @@ public class TopTenController {
     @FXML
     private TableColumn<GameResult, ZonedDateTime> created;
 
-
     private GameResultDao gameResultDao;
 
+    /**
+     * A void method that loads launch.fxml.
+     * @param actionEvent An action which is sent when a button is pressed.
+     * @throws IOException IOException An exception that is caught if an error occurs.
+     */
     public void back(ActionEvent actionEvent) throws IOException {
-
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/launch.fxml"));
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
-//        log.info("Loading launch scene.");
+        log.info("Loading launch scene.");
     }
 
-
+    /**
+     * Gets the top 10 players from the database and shows a table with the data.
+     */
     @FXML
     public void initialize() {
         gameResultDao = GameResultDao.getInstance();
