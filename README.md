@@ -30,5 +30,5 @@
 
 Reach out to me at one of the following places!
 
-- Portfolio at <a href="https://www.https://mohamed-gibreel.github.io/" target="_blank">`Mohamed-gibreel.github.io`</a>
-- Linkedin at <a href="https://www.linkedin.com/in/mohamedgibreel/" target="_blank">`Mohamed Gibreel`</a>
+- Portfolio at <a href="https://mohamed-gibreel.github.io/" target="_blank">`Mohamed-gibreel.github.io`</a>
+- Linkedin at <a href="https://.linkedin.com/in/mohamedgibreel/" target="_blank">`Mohamed Gibreel`</a>
