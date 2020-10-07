@@ -7,9 +7,9 @@
     <packaging>jar</packaging>
     <version>1.0</version>
 
-    <name>Chess Game</name>
+    <name>Board Game</name>
     <description>
-        A chess game that has only 1 queen that moves left,down,diagonally left.
+        A board game that has only 1 queen that moves left,down,diagonally left.
         The goal is to reach the bottom left cell.
     </description>
     <url>https://github.com/Mohamed-Gibreel/Chess_SWE_Project</url>
@@ -22,7 +22,7 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/Mohamed-Gibreel/Chess_SWE_Project</connection>
+        <connection>scm:git:https://github.com/Mohamed-Gibreel/Board-Game</connection>
     </scm>
 
     <properties>

@@ -110,7 +110,7 @@ public class GameController {
     private String userName1;
     private String userName2;
     private Instant beginGame;
-    private boolean isSolved = false;
+    private boolean gameFinished = false;
     /**
      * Returns a random number from the array cells that can be used as a starting position for the queen.
      * @return random number from array cells
@@ -155,11 +155,12 @@ public class GameController {
 
     @FXML
     public void initialize() {
-        gameResultDao = GameResultDao.getInstance();
+        gameResultDao = GameResultDao.  getInstance();
 
         stepCount = 0;
         solvedLabel.setText("");
         beginGame = Instant.now();
+        gameFinished = false;
 
         player1turn.setOpacity(1);
         player2turn.setOpacity(0);
@@ -270,6 +271,7 @@ public class GameController {
         final Timeline timeline = new Timeline();
         if (x == 0 && y == 700) {
             doneButton.setText("Finish");
+            gameFinished = true;
             winner = player1turn.getOpacity() == 1 ? "Winner is " + userName1 : "Winner is " + userName2;
             winnerName = player1turn.getOpacity() == 1 ? userName1 : userName2;
             timeline.getKeyFrames().add(
@@ -325,7 +327,7 @@ public class GameController {
 
         GameResult result = GameResult.builder()
                 .player(winnerName)
-                .solved(isSolved)
+                .solved(gameFinished)
                 .duration(java.time.Duration.between(beginGame, Instant.now()))
                 .steps(stepCount)
                 .build();
@@ -338,7 +340,7 @@ public class GameController {
      * @throws IOException An exception that is caught if an error occurs.
      */
     public void finishGame(ActionEvent actionEvent) throws IOException {
-        if (isSolved) {
+        if (gameFinished) {
             gameResultDao.persist(getResult());
         }
 
