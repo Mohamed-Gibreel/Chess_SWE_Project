@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chess-Project" />
+        <module name="Meeting_Scheduler" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Chess-Project" target="11" />
+      <module name="Meeting_Scheduler" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

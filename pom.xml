@@ -3,26 +3,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>chess</artifactId>
+    <artifactId>Meeting_Scheduler</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
 
-    <name>Chess Game</name>
+    <name></name>
     <description>
-        A chess game that has only 1 queen that moves left,down,diagonally left.
-        The goal is to reach the bottom left cell.
     </description>
-    <url>https://github.com/Mohamed-Gibreel/Chess_SWE_Project</url>
+    <url></url>
     <developers>
         <developer>
-            <name>Mohamed Gibreel</name>
-            <email>m.adilgibreel@gmail.com</email>
-            <id>NHZ48O</id>
+            <name></name>
+            <email></email>
+            <id></id>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/Mohamed-Gibreel/Chess_SWE_Project</connection>
+        <connection></connection>
     </scm>
 
     <properties>

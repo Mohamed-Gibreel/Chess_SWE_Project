@@ -4,21 +4,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TopTenController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TimetableController">
     <children>
-        <TableView fx:id="toptenTable" editable="true" layoutX="25.0" layoutY="74.0" prefHeight="550.0" prefWidth="650.0">
+        <TableView fx:id="schedule" editable="true" layoutX="25.0" layoutY="74.0" prefHeight="550.0" prefWidth="650.0">
             <columns>
-                <TableColumn fx:id="player" prefWidth="200.0" text="Player" />
-                <TableColumn fx:id="steps" prefWidth="50.0" text="Steps" />
-                <TableColumn fx:id="duration" prefWidth="100.0" text="Duration" />
-                <TableColumn fx:id="created" prefWidth="295.0" text="Date" />
+            <TableColumn fx:id="ID" prefWidth="33.0" text="ID" />
+            <TableColumn fx:id="Name" prefWidth="111.0" text="Name" />
+            <TableColumn fx:id="Profession" prefWidth="104.0" text="Profession" />
+            <TableColumn fx:id="Day" prefWidth="86.0" text="Day" />
+            <TableColumn fx:id="Time" minWidth="0.0" prefWidth="115.0" text="Time" />
+            <TableColumn fx:id="Availability" prefWidth="199.0" text="Availability" />
             </columns>
         </TableView>
-        <Label layoutX="272.0" layoutY="32.0" text="Top Ten games:" textFill="WHITE">
+        <Label layoutX="280.0" layoutY="32.0" text="Available Time" textFill="WHITE">
             <font>
                 <Font size="22.0" />
             </font>
         </Label>
-        <Button layoutX="300.0" layoutY="635.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="122.0" text="main menu" />
+        <Button layoutX="289.0" layoutY="635.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="122.0" text="Back" />
     </children>
 </Pane>

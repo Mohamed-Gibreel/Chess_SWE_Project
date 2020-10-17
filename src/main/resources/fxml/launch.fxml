@@ -4,18 +4,58 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LaunchController">
+<Pane fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="681.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LaunchController">
     <children>
-        <Label layoutX="252.0" layoutY="76.0" text="Chess" textFill="WHITE">
+        <Label layoutX="163.0" layoutY="60.0" prefHeight="74.0" prefWidth="364.0" text="Meeting Scheduler" textFill="WHITE">
             <font>
-                <Font name="MathJax_Main-Bold" size="36.0" />
+                <Font name="Microsoft Himalaya" size="67.0" />
             </font>
         </Label>
-        <Button fx:id="startButton" layoutX="249.0" layoutY="287.0" mnemonicParsing="false" onAction="#startAction" prefHeight="51.0" prefWidth="105.0" text="Start game" />
-        <Label fx:id="errorLabel" layoutX="225.0" layoutY="172.0" prefHeight="16.0" prefWidth="151.0" textFill="#e30e0e" />
-      <Label layoutX="161.0" layoutY="208.0" text="Player 1:" textFill="WHITE" />
-      <TextField fx:id="usernameTextfield1" layoutX="223.0" layoutY="204.0" prefHeight="26.0" prefWidth="158.0" />
-        <Label layoutX="161.0" layoutY="241.0" text="Player 2:" textFill="WHITE" />
-        <TextField fx:id="usernameTextfield2" layoutX="223.0" layoutY="236.0" prefHeight="26.0" prefWidth="158.0" />
+        <Button layoutX="286.0" layoutY="367.0" mnemonicParsing="false" onAction="#checkMeeting" prefHeight="35.0" prefWidth="105.0" text="Check">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+        <Label fx:id="errorLabel" layoutX="265.0" layoutY="182.0" prefHeight="16.0" prefWidth="151.0" textFill="#e30e0e" />
+      <Button layoutX="391.0" layoutY="155.0" mnemonicParsing="false" onAction="#startAction" text="Timetable">
+         <font>
+            <Font name="Droid Serif" size="14.0" />
+         </font></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="147.0" prefHeight="35.0" prefWidth="173.0" text="Show timetable" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Himalaya" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="252.0" prefHeight="40.0" prefWidth="523.0" text="Please select who you want the CEO to make a meeting with :" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Himalaya" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="361.0" prefHeight="41.0" prefWidth="667.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Droid Serif" size="14.0" />
+         </font></Label>
+      <Label layoutX="257.0" layoutY="303.0" prefHeight="35.0" prefWidth="20.0" text="&amp;" textFill="WHITE">
+         <font>
+            <Font name="Droid Serif Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="303.0" prefHeight="35.0" prefWidth="20.0" text="At" textFill="WHITE">
+         <font>
+            <Font name="Droid Serif" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="Choice_1" layoutX="129.0" layoutY="308.0" prefHeight="25.0" prefWidth="119.0" promptText="Please Choose" />
+      <ComboBox fx:id="Choice_2" layoutX="279.0" layoutY="308.0" prefHeight="25.0" prefWidth="119.0" promptText="Please Choose" />
+      <ComboBox fx:id="timeChoice" layoutX="440.0" layoutY="308.0" prefHeight="25.0" prefWidth="133.0" promptText="Select Time" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="201.0" prefHeight="43.0" prefWidth="208.0" text="Insert a new row" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Himalaya" size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="391.0" layoutY="208.0" mnemonicParsing="false" onAction="#insertAction" prefHeight="28.0" prefWidth="87.0" text="Insert">
+         <font>
+            <Font name="Droid Serif" size="14.0" />
+         </font>
+      </Button>
     </children>
 </Pane>
